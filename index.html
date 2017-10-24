@@ -45,22 +45,41 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-4">
-				<div id="img-dump"></div>
+				<img src="#" id="artist-image">
 			</div>
 			<div class="col-sm-8">
 				<div id="bio-dump"></div>
 			</div>
 		</div>
 
+		<form id="second-form">
+			<div class="input-group">
+				<input type="text" name="search2" id="search-word-2" class="form-control"/>
+				<div class="input-group-btn">
+					<button class="btn btn-primary" id="submit">Search!</button>
+				</div>
+			</div>
+		</form>
+
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="panel panel-default">
 					<div class="panel panel-heading">
-						<h2>Up-coming Events!</h2>
+						<h2>Events!</h2>
 					</div>
 
 					<div class="panel panel-body">
-						<div id="concert-dump"></div>
+						<table>
+							<thead>
+								<tr>
+									<th>Event Date</th>
+									<th>Venue</th>
+									<th>Location</th>
+									<th>Offers</th>
+								</tr>
+							</thead>
+							<tbody id="concert-dump"></tbody>
+						</table>
 					</div>
 
 					<div class="panel panel-footing">
