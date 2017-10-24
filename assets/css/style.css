@@ -1,0 +1,17 @@
+#default-page {
+  margin-bottom: 0;
+  height: 100vh;
+  position: relative;
+}
+
+#search-group {
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+#band-info {
+  display: none;
+}

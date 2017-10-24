@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lost &#38; FFOund</title>
+	<meta name="viewport" initial-scale="1">
+
+	<!-- Amatic SC Font -->
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
+
+	<!-- Latest and Greatest Bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Slick Carousel -->
+	<link rel="stylesheet" type="text/css" href="assets/slick-1.8.0/slick/slick.css" />
+	<link rel="stylesheet" type="text/css" href="assets/slick-1.8.0/slick/slick-theme.css" />
+
+	<!-- Reset.css -->
+	<link rel=stylesheet type="text/css" href="assets/css/reset.css">
+
+	<!-- Style.css -->
+	<link rel=stylesheet type="text/css" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="jumbotron" id="default-page">
+	<div class="container" id="search-group">
+		<h1>Lost &amp; FFOund</h1>
+		<form>
+			<div class="input-group">
+				<input type='text' class="form-control" id="search-word" placeholder="Search Your Favorite Artist!" />
+				<span class="input-group-btn">
+					<button class="btn btn-primary" id="search">Search!</button>
+				</span>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div id="band-info">
+	<div class="jumbotron">
+		<div class="container" id="band-name"></div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4">
+				<div id="img-dump"></div>
+			</div>
+			<div class="col-sm-8">
+				<div id="bio-dump"></div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="panel panel-default">
+					<div class="panel panel-heading">
+						<h2>Up-coming Events!</h2>
+					</div>
+
+					<div class="panel panel-body">
+						<div id="concert-dump"></div>
+					</div>
+
+					<div class="panel panel-footing">
+						<div id="sim-artist-dump"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+<!-- 	<header id='page-header'>
+		<nav>
+			<ul>
+				<li id='home'>Home</a></li>
+				<li id='band-search-button'>Band Search</li>
+				<li id='contact-human'>Contact</li>
+			</ul>
+		</nav>
+		<img id='main-logo' src="assets/img/logo.png">
+		<input id='searchbar' class='form-control submit' type="searchbar" name="searchbar" placeholder="search for a band...">
+	</header>
+	<section id='animal-overlays'>
+		<div id='bunny'>
+			<img class='animals' src='assets/img/crossbunny1.png' />
+			<p>Hi! Welcome to Lost and FFOund. Here, you can search for a band, find a bio on things you might not have known about the band, track events, and even find similar artists if your favorite isn't touring near you! </p>
+		</div>
+		<div id='bear'>
+			<img class='animals' src='assets/img/crossbunny3.png' />
+			<p>Click the text box and write your favorite band name in the text box. I'm a Nickleback fan, myself! You could probably tell, huh? There's two types of people in the world! People who love Nickleback and people who are just LIARS!</p>
+		</div>
+		<div id='duck'>
+			<img class='animals' src='assets/img/crossbunny2.png' />
+			<p>Click search, and a ton of information will show up. You can find information on where shows are going to be and when! A big picture of the artist should show up, too.</p>
+		</div>
+		<div id='kitty'>
+			<img class='animals' src='assets/img/crossbunny4.png' />
+			<p>if you're not 100% satisfied you can contact us through our contact page and complain! We love complaints because here at Lost and FFOund we consider them to be something called "feedback" which is very important.</p>
+		</div>
+
+	</section>
+	<div id="dump"> -->
+		<!-- crappy band photos go here -->
+	<!-- </div> -->
+
+	<!-- begin BandSearch -->
+<!-- 	<main>
+		<div id='band-search' class='container'>
+ -->			<!--empty bandsearch page-->
+<!-- 			<div id='empty-bandsearch'>
+				<p id='empty-p'>enter a band to get started</p>
+				<img src='assets/img/pandaarrow.png' />
+				<p id='error'></p>
+			</div>
+			<div id='band-data'>
+				<div class='row'>
+					<h1 id="band-name" class='col-xs-12'></h1>
+				</div>
+				<section id='top-section' class='row align-items-center justify-content-center'>
+					<div class='col-sm-3'>
+						<img id='band-img' src="#" />
+					</div>
+					<article class='col-sm-9'>
+						<p id="band-bio"></p>
+					</article>
+				</section>
+				<section id='middle-section' class='row'>
+					<h2>Events</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Event Date</th>
+								<th>Venue Name</th>
+								<th>Location</th>
+								<th>Offers</th>
+							</tr>
+						</thead>
+						<tbody id="events-table"></tbody>
+					</table>
+				</section>
+
+				<section id='bottom-section' class='row'>
+					<article>
+						<h2>Similar Artists</h2>
+						<div id="similar">
+						</div>
+					</article>
+				</section>
+			</div>
+	</main>
+	</div>
+ -->
+	<!-- end Band Search -->
+
+	<!-- Contact Page -->
+<!-- 	<div id="human-contact">
+		<form id='human-contact-form'>
+			<div class='contact-form-row'>
+				<label for="firstname">First Name</label>
+				<input type="text" id="firstname" name="firstname" placeholder="First name">
+				<p class="error">This field is required</p>
+			</div>
+			<div class='contact-form-row'>
+				<label for="lastname">Last Name</label>
+				<input type="text" id="lastname" name="lastname" placeholder="Last name">
+				<p class="error">This field is required</p>
+			</div>
+			<div class='contact-form-row'>
+				<label for="subject">Subject</label>
+				<textarea id="subject" name="subject" placeholder="Ask us a question!  Leave us a COMPLAINT"></textarea>
+				<p class="error">This field is required</p>
+			</div>
+			<button id='contact-form-button' type="submit">Send it to our trashcan!</button>
+		</form>
+		<div>Our trashcan has <span id="trashcan"></span> items</div>
+	</div>
+ -->	<!-- End Contact Page -->
+
+<!-- 	<footer>
+		<p>People &copy; All Rights Reserved | Do not reproduce without expressed written consent.</p>
+	</footer>
+ -->
+
+	<!-- Firebase 4.5.1 -->
+	<script src="https://www.gstatic.com/firebasejs/4.5.1/firebase.js"></script>
+
+	<!-- jQuery 3.2.1 -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Moment.js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.0/moment.min.js"></script>
+
+	<!-- Slick Carousel JS -->
+	<script type="text/javascript" src="assets/slick-1.8.0/slick/slick.min.js"></script>
+
+	<!-- Bootstrap JS Plugin -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+	<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
+	<!-- our logic.js file -->
+	<script type="text/javascript" src='assets/javascript/logic.js'></script>
+
+</body>
+</html>
