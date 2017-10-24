@@ -46,6 +46,7 @@ table, h2 {
   margin: 0;
   display: inline-block;
   transition: all .7s ease;
+  cursor: pointer;
 }
 
 .sim-artist {

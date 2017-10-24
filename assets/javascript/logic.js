@@ -31,13 +31,14 @@ $(document).ready(function() {
       url: lastURL,
       method: 'GET'
     }).done(function(response) {
+      $('#sim-artist-dump').empty();
+      $('#bio-dump').empty();
 
       $('#band-name').html('<h1>' + response.artist.name + '</h1>');
       $('#bio-dump').append('<p>' + response.artist.bio.summary + '</p>')
       $('#artist-image').attr('src', response.artist.image[4]['#text']);
       $('#artist-image').attr('alt', response.artist.name);
 
-      $('#sim-artist-dump').empty();
 
       for(var i = 0; i < response.artist.similar.artist.length; i++){
         var simName = $('<span class="sim-artist">');
@@ -64,9 +65,9 @@ $(document).ready(function() {
       method: 'GET'
     }).done(function(response) {
 
-      console.log(response)
-
       var dataArr = [];
+
+      $('#concert-dump').empty();
 
       if(!response.length){
         $('#concert-dump').append('<p>No upcoming events</p>')
@@ -100,4 +101,10 @@ $(document).ready(function() {
     })
   }
 
+  $(document).on('click', '.sim-div', function(event) {
+    event.preventDefault();
+    var keyword = $(this).attr('data-name');
+    drawArtist(keyword);
+    drawEvents(keyword);
+  })
 })
