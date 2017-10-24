@@ -9,7 +9,18 @@ $(document).ready(function() {
       $('#default-page').fadeOut();
       $('#band-info').fadeIn();
       drawArtist(keyword);
-      // drawEvents(keyword);
+      drawEvents(keyword);
+    }
+  })
+
+  $('#submit').on('click', function(event) {
+    event.preventDefault();
+    var keyword = $('#search-word-2').val().trim();
+
+    if(keyword) {
+      drawArtist(keyword);
+      drawEvents(keyword);
+      $('#search-word-2').val('')
     }
   })
 
@@ -21,10 +32,12 @@ $(document).ready(function() {
       method: 'GET'
     }).done(function(response) {
 
-      console.log(response);
-      $('#band-name').append('<h1>' + response.artist.name + '</h1>');
+      $('#band-name').html('<h1>' + response.artist.name + '</h1>');
       $('#bio-dump').append('<p>' + response.artist.bio.summary + '</p>')
       $('#artist-image').attr('src', response.artist.image[4]['#text']);
+      $('#artist-image').attr('alt', response.artist.name);
+
+      $('#sim-artist-dump').empty();
 
       for(var i = 0; i < response.artist.similar.artist.length; i++){
         var simName = $('<span class="sim-artist">');
@@ -34,6 +47,7 @@ $(document).ready(function() {
           var newImg = response.artist.similar.artist[i].image[1]['#text'];
           simName.html(newName);
           simImg.attr('src', newImg);
+          simImg.attr('alt', newName);
           simDiv.attr('data-name', newName);
         simDiv.append(simImg);
         simDiv.append(simName);
@@ -49,7 +63,40 @@ $(document).ready(function() {
       url: bandsURL,
       method: 'GET'
     }).done(function(response) {
-      
+
+      console.log(response)
+
+      var dataArr = [];
+
+      if(!response.length){
+        $('#concert-dump').append('<p>No upcoming events</p>')
+      }
+      else {
+        for(var i = 0; i < response.length; i++) {
+          if(response[i].offers.length){
+          dataArr.push({
+            'Event Date' : moment(response[i].datetime).format('MMM Do, YYYY h:mma'),
+            'Venue Name' : response[i].venue.name,
+            'Location' : response[i].venue.city + ', ' + response[i].venue.region,
+            'Offers' : '<a href="' + response[i].offers[0].url + '">Get Tickets</a>'
+            })
+          }
+        }
+      }
+
+      $('#concert-dump').DataTable({
+        destroy: true,
+        responsive: true,
+        bSort: false,
+        data: dataArr,
+        columns: [
+          { data: 'Event Date' },
+          { data: 'Venue Name' },
+          { data: 'Location' },
+          { data: 'Offers' }
+        ]
+      })
+
     })
   }
 

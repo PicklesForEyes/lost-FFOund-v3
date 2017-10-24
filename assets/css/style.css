@@ -1,3 +1,24 @@
+h1, h2 {
+  font-family: 'PT Sans Caption';
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-family: 'PT Serif'
+}
+
+#bio-dump {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+table, h2 {
+  font-family: 'PT Sans'
+}
+
 #default-page {
   margin-bottom: 0;
   height: 100vh;
@@ -23,14 +44,27 @@
 
 .sim-div {
   margin: 0;
-  display: inline;
+  display: inline-block;
+  transition: all .7s ease;
+}
+
+.sim-artist {
+  display: block;
 }
 
 .sim-img {
   border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+.sim-div:hover {
+  transform: scale(1.2);
 }
 
 #sim-artist-dump {
-  margin: 0 auto;
+  text-align: center;
+  justify-content: space-around;
+  width: 100%;
+  display: flex
 }
-
