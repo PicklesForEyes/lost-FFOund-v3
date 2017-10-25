@@ -39,7 +39,7 @@ table, h2 {
 
 #artist-image {
   border-radius: 5%;
-  
+
 }
 
 .sim-img {
@@ -72,6 +72,6 @@ table, h2 {
   text-align: center;
   justify-content: space-around;
   width: 100%;
-  display: flex;
+  display: -webkit-flex;
   font-family: 'PT Sans'
 }
